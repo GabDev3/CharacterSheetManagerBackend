@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>backend</name>
+    </assembly>
+    <members>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.GetAllCharacters">
+            <summary>
+            Get all characters (summary view)
+            </summary>
+            <returns>List of character summaries</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.GetCharacterById(System.Int32)">
+            <summary>
+            Get a specific character by ID with full details
+            </summary>
+            <param name="id">Character ID</param>
+            <returns>Character details including items and spells</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.CreateCharacter(CharacterSheetManager.DTOs.Character.CreateCharacterDto)">
+            <summary>
+            Create a new character
+            </summary>
+            <param name="createDto">Character creation data</param>
+            <returns>Created character details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.UpdateCharacter(System.Int32,CharacterSheetManager.DTOs.Character.UpdateCharacterDto)">
+            <summary>
+            Update a character completely
+            </summary>
+            <param name="id">Character ID</param>
+            <param name="updateDto">Character update data</param>
+            <returns>Updated character details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.PatchCharacter(System.Int32,CharacterSheetManager.DTOs.Character.PatchCharacterDto)">
+            <summary>
+            Partially update a character
+            </summary>
+            <param name="id">Character ID</param>
+            <param name="patchDto">Partial character update data</param>
+            <returns>Updated character details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.DeleteCharacter(System.Int32)">
+            <summary>
+            Delete a character
+            </summary>
+            <param name="id">Character ID</param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.GetCharactersByClass(System.String)">
+            <summary>
+            Get characters by class
+            </summary>
+            <param name="className">Character class name</param>
+            <returns>List of characters with the specified class</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.CharactersController.GetCharactersByLevelRange(System.Int32,System.Int32)">
+            <summary>
+            Get characters by level range
+            </summary>
+            <param name="minLevel">Minimum level (inclusive)</param>
+            <param name="maxLevel">Maximum level (inclusive)</param>
+            <returns>List of characters within the specified level range</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.GetAllItems">
+            <summary>
+            Get all items
+            </summary>
+            <returns>List of all items</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.GetItemById(System.Int32)">
+            <summary>
+            Get a specific item by ID
+            </summary>
+            <param name="id">Item ID</param>
+            <returns>Item details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.GetItemsByCharacterId(System.Int32)">
+            <summary>
+            Get items by character ID
+            </summary>
+            <param name="characterId">Character ID</param>
+            <returns>List of items belonging to the character</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.CreateItem(CharacterSheetManager.DTOs.Item.CreateItemDto)">
+            <summary>
+            Create a new custom item
+            </summary>
+            <param name="createDto">Item creation data</param>
+            <returns>Created item details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.CreateItemFromTemplate(CharacterSheetManager.DTOs.Item.CreateItemFromTemplateDto)">
+            <summary>
+            Create an item from a template
+            </summary>
+            <param name="createDto">Item from template creation data</param>
+            <returns>Created item details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.UpdateItem(System.Int32,CharacterSheetManager.DTOs.Item.UpdateItemDto)">
+            <summary>
+            Update an item completely
+            </summary>
+            <param name="id">Item ID</param>
+            <param name="updateDto">Item update data</param>
+            <returns>Updated item details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.PatchItem(System.Int32,CharacterSheetManager.DTOs.Item.UpdateItemDto)">
+            <summary>
+            Partially update an item
+            </summary>
+            <param name="id">Item ID</param>
+            <param name="patchDto">Partial item update data</param>
+            <returns>Updated item details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemsController.DeleteItem(System.Int32)">
+            <summary>
+            Delete an item
+            </summary>
+            <param name="id">Item ID</param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.GetAllSpells">
+            <summary>
+            Get all spells
+            </summary>
+            <returns>List of all spells</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.GetSpellById(System.Int32)">
+            <summary>
+            Get a specific spell by ID
+            </summary>
+            <param name="id">Spell ID</param>
+            <returns>Spell details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.GetSpellsByCharacterId(System.Int32)">
+            <summary>
+            Get spells by character ID
+            </summary>
+            <param name="characterId">Character ID</param>
+            <returns>List of spells belonging to the character</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.CreateSpell(CharacterSheetManager.DTOs.Spell.CreateSpellDto)">
+            <summary>
+            Create a new custom spell
+            </summary>
+            <param name="createDto">Spell creation data</param>
+            <returns>Created spell details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.CreateSpellFromTemplate(CharacterSheetManager.DTOs.Spell.CreateSpellFromTemplateDto)">
+            <summary>
+            Create a spell from a template
+            </summary>
+            <param name="createDto">Spell from template creation data</param>
+            <returns>Created spell details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.UpdateSpell(System.Int32,CharacterSheetManager.DTOs.Spell.UpdateSpellDto)">
+            <summary>
+            Update a spell completely
+            </summary>
+            <param name="id">Spell ID</param>
+            <param name="updateDto">Spell update data</param>
+            <returns>Updated spell details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.PatchSpell(System.Int32,CharacterSheetManager.DTOs.Spell.UpdateSpellDto)">
+            <summary>
+            Partially update a spell
+            </summary>
+            <param name="id">Spell ID</param>
+            <param name="patchDto">Partial spell update data</param>
+            <returns>Updated spell details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellsController.DeleteSpell(System.Int32)">
+            <summary>
+            Delete a spell
+            </summary>
+            <param name="id">Spell ID</param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.GetAllItemTemplates">
+            <summary>
+            Get all item templates
+            </summary>
+            <returns>List of all item templates</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.GetActiveItemTemplates">
+            <summary>
+            Get only active item templates
+            </summary>
+            <returns>List of active item templates</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.GetItemTemplateById(System.Int32)">
+            <summary>
+            Get a specific item template by ID
+            </summary>
+            <param name="id">Item template ID</param>
+            <returns>Item template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.GetItemTemplatesByCategory(System.String)">
+            <summary>
+            Get item templates by category
+            </summary>
+            <param name="category">Category name</param>
+            <returns>List of item templates in the category</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.GetCategories">
+            <summary>
+            Get all available categories
+            </summary>
+            <returns>List of category names</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.CreateItemTemplate(CharacterSheetManager.DTOs.ItemTemplate.CreateItemTemplateDto)">
+            <summary>
+            Create a new item template
+            </summary>
+            <param name="createDto">Item template creation data</param>
+            <returns>Created item template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.UpdateItemTemplate(System.Int32,CharacterSheetManager.DTOs.ItemTemplate.UpdateItemTemplateDto)">
+            <summary>
+            Update an item template completely
+            </summary>
+            <param name="id">Item template ID</param>
+            <param name="updateDto">Item template update data</param>
+            <returns>Updated item template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.PatchItemTemplate(System.Int32,CharacterSheetManager.DTOs.ItemTemplate.UpdateItemTemplateDto)">
+            <summary>
+            Partially update an item template
+            </summary>
+            <param name="id">Item template ID</param>
+            <param name="patchDto">Partial item template update data</param>
+            <returns>Updated item template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.ItemTemplatesController.DeleteItemTemplate(System.Int32)">
+            <summary>
+            Delete an item template
+            </summary>
+            <param name="id">Item template ID</param>
+            <returns>No content</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.GetAllSpellTemplates">
+            <summary>
+            Get all spell templates
+            </summary>
+            <returns>List of all spell templates</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.GetActiveSpellTemplates">
+            <summary>
+            Get only active spell templates
+            </summary>
+            <returns>List of active spell templates</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.GetSpellTemplateById(System.Int32)">
+            <summary>
+            Get a specific spell template by ID
+            </summary>
+            <param name="id">Spell template ID</param>
+            <returns>Spell template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.GetSpellTemplatesByLevel(System.Int32)">
+            <summary>
+            Get spell templates by level
+            </summary>
+            <param name="level">Spell level (0-9)</param>
+            <returns>List of spell templates of the specified level</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.GetSpellTemplatesBySchool(System.String)">
+            <summary>
+            Get spell templates by school
+            </summary>
+            <param name="school">School name</param>
+            <returns>List of spell templates in the school</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.GetSchools">
+            <summary>
+            Get all available schools
+            </summary>
+            <returns>List of school names</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.CreateSpellTemplate(CharacterSheetManager.DTOs.SpellTemplate.CreateSpellTemplateDto)">
+            <summary>
+            Create a new spell template
+            </summary>
+            <param name="createDto">Spell template creation data</param>
+            <returns>Created spell template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.UpdateSpellTemplate(System.Int32,CharacterSheetManager.DTOs.SpellTemplate.UpdateSpellTemplateDto)">
+            <summary>
+            Update a spell template completely
+            </summary>
+            <param name="id">Spell template ID</param>
+            <param name="updateDto">Spell template update data</param>
+            <returns>Updated spell template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.PatchSpellTemplate(System.Int32,CharacterSheetManager.DTOs.SpellTemplate.UpdateSpellTemplateDto)">
+            <summary>
+            Partially update a spell template
+            </summary>
+            <param name="id">Spell template ID</param>
+            <param name="patchDto">Partial spell template update data</param>
+            <returns>Updated spell template details</returns>
+        </member>
+        <member name="M:CharacterSheetManager.Controllers.SpellTemplatesController.DeleteSpellTemplate(System.Int32)">
+            <summary>
+            Delete a spell template
+            </summary>
+            <param name="id">Spell template ID</param>
+            <returns>No content</returns>
+        </member>
+        <member name="T:backend.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:backend.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
