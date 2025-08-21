@@ -167,3 +167,4 @@ E:\vsCodeProjects\CharacterSheetManager\CharacterSheetManagerBackend\backend\obj
 E:\vsCodeProjects\CharacterSheetManager\CharacterSheetManagerBackend\backend\obj\Debug\net9.0\backend.pdb
 E:\vsCodeProjects\CharacterSheetManager\CharacterSheetManagerBackend\backend\obj\Debug\net9.0\backend.genruntimeconfig.cache
 E:\vsCodeProjects\CharacterSheetManager\CharacterSheetManagerBackend\backend\obj\Debug\net9.0\ref\backend.dll
+E:\vsCodeProjects\CharacterSheetManager\CharacterSheetManagerBackend\backend\obj\Debug\net9.0\backend.sourcelink.json
